@@ -19,6 +19,7 @@ class ViewController: TabmanViewController,PageboyViewControllerDataSource{
         self.dataSource = self
         self.embedBar(inView: self.tabmanContainer)
         
+        self.bar.style = .buttonBar
         self.bar.appearance = TabmanBar.Appearance({ (appearance) in
             // customise appearance here
 //            appearance.indicator.isProgressive = true
