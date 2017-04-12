@@ -34,11 +34,13 @@ class ViewController: TabmanViewController,PageboyViewControllerDataSource{
         
         let loginVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
         let registerVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "register")
+        let tableVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "table")
         
-        let viewControllers = [loginVC, registerVC]
+        let viewControllers = [tableVC,loginVC, registerVC]
         
         // configure the bar
-        self.bar.items = [TabmanBarItem(title: "Login"),
+        self.bar.items = [TabmanBarItem(title:"Table"),
+            TabmanBarItem(title: "Login"),
                           TabmanBarItem(title: "Register")]
         
         return viewControllers
